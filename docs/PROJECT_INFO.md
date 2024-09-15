@@ -4,7 +4,12 @@ Claro! Aqui está um exemplo de README para o seu projeto SOLID + MVC que usa No
 Projeto SOLID + MVC
 Descrição
 Este repositório contém o projeto desenvolvido durante a aula sobre SOLID e MVC: uma API Rest completa com Node.js, TypeScript, Express e Prisma. O projeto permite o cadastro de produtos, além de possibilitar a venda e compra desses produtos, ajustando o estoque conforme necessário. Também inclui uma interface simples em React para visualizar e gerenciar os produtos.
-https://private-user-images.githubusercontent.com/107580593/317262083-a378db84-fe4d-4b5d-997e-7899b3c8e661.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjY0MTQ3MDgsIm5iZiI6MTcyNjQxNDQwOCwicGF0aCI6Ii8xMDc1ODA1OTMvMzE3MjYyMDgzLWEzNzhkYjg0LWZlNGQtNGI1ZC05OTdlLTc4OTliM2M4ZTY2MS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwOTE1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDkxNVQxNTMzMjhaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jZjMxNjk3OTcwZDg4ZDYzMWViYjI1OWJiMmZhOTY0OGEwNjhjNTAyMzFhODgyYTU3ODA4NjViMjQ3YTc1ZjhiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.x3u2uWLB5kPgMTJN7Wbq4mOzoncXUUpvvQQCK55Fs5s
+
+SOLID
+https://images.app.goo.gl/byPbYNPnq7DLFumQ8
+
+MVC
+https://images.app.goo.gl/nsXXTgZAxY6aHxsq7
 
 Tecnologias Utilizadas
 Backend
