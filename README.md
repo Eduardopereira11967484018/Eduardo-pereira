@@ -1,140 +1,185 @@
-# Desafio Fullstack: Os Anéis de Poder
-_One Challenge to rule them all, One Challenge to find them, One Challenge to bring them all, and in the darkness bind them_
+Desafio Fullstack: Os Anéis de Poder
+Projeto SOLID + MVC
+Descrição
+Este repositório contém o projeto desenvolvido durante a aula sobre SOLID e MVC: uma API Rest completa com Node.js, TypeScript, Express e Prisma. O projeto permite o cadastro de produtos, além de possibilitar a venda e compra desses produtos, ajustando o estoque conforme necessário. Também inclui uma interface simples em React para visualizar e gerenciar os produtos.
 
-## 💍 Contexto do Desafio
+SOLID
+https://images.app.goo.gl/byPbYNPnq7DLFumQ8
 
-O grande mago J.R.R. Tolkien nos deixou a famosa frase:
+MVC
+https://images.app.goo.gl/nsXXTgZAxY6aHxsq7
 
-> **Three Rings for the Elven-kings under the sky,  
-> Seven for the Dwarf-lords in their halls of stone,  
-> Nine for Mortal Men doomed to die,  
-> One for the Dark Lord on his dark throne  
-> In the Land of Mordor where the Shadows lie.  
-> One Ring to rule them all, One Ring to find them,  
-> One Ring to bring them all, and in the darkness bind them  
-> In the Land of Mordor where the Shadows lie.**
+Tecnologias Utilizadas
+Backend
+Node.js
+TypeScript
+Express
+Prisma
+SQLite
+Jest (para testes unitários)
+Frontend
+React
+Cypress (para testes end-to-end)
+Axios (para requisições HTTP)
+React Hook Form (para gerenciamento de formulários)
+React Slick e Slick Carousel (para o carrossel de produtos)
+TypeScript
+Tailwind CSS (para estilos)
+Estrutura do Projeto
+Backend
+Criar (POST) um novo anel
 
-Sua missão será criar um CRUD (Create, Read, Update, Delete) para gerenciar os anéis e desenvolver um frontend para visualizar e manipular essas informações.
+Endpoint: /api/rings
+Requisitos: Nome, poder, portador, forjadoPor, imagem
+Regras de Negócio:
+Elfos: Máximo de 3 anéis
+Anões: Máximo de 7 anéis
+Homens: Máximo de 9 anéis
+Sauron: Apenas 1 anel
+Listar (GET) todos os anéis
 
-## 🎯 Objetivo
+Endpoint: /api/rings
+Retorna uma lista com todos os anéis e suas propriedades.
+Atualizar (PUT) um anel
 
-### Backend
-Criar uma API em **Node.js** com **TypeScript** para realizar as seguintes operações:
+Endpoint: /api/rings/:id
+Atualiza as informações de um anel específico.
+Deletar (DELETE) um anel
 
-- **Criar** (POST) um novo anel.
-- **Listar** (GET) todos os anéis.
-- **Atualizar** (PUT) as informações de um anel.
-- **Deletar** (DELETE) um anel existente.
+Endpoint: /api/rings/:id
+Remove um anel do banco de dados.
+Frontend
+Tela de Criação/Atualização
 
-### Frontend
-Desenvolver uma interface simples em **React** com as seguintes telas:
+Formulário para criar ou atualizar um anel.
+Campos: Nome, poder, portador, forjadoPor, imagem.
+Botões: Criar e Atualizar.
+Tela de Visualização
 
-- **Tela de Criação/Atualização**: Formulário para criar um novo anel ou atualizar um anel existente.
-- **Tela de Visualização**: Exibição dos anéis criados em um **carrossel**, mostrando as informações de cada anel (nome, poder, portador, forjadoPor e imagem).
+Exibição dos anéis em um carrossel.
+Mostra as informações de cada anel: nome, poder, portador, forjadoPor e imagem.
+Instalação e Execução
+Backend
+Clone o repositório
 
-## ⚔️ Requisitos Funcionais
+bash
+Copiar código
+git clone <URL_DO_REPOSITORIO>
+cd <DIRETORIO_DO_PROJETO>
+Instale as dependências
 
-### Backend
+bash
+Copiar código
+npm install
+Configure o banco de dados
 
-1. **Criar um Anel**  
-   O anel deverá ter as seguintes propriedades:
-   - `nome`: Nome do anel (ex: "Narya, o anel do fogo").
-   - `poder`: Uma breve descrição do poder do anel (ex: "Seu portador ganha resistência ao fogo").
-   - `portador`: O nome do portador atual (Ex: Gandalf).
-   - `forjadoPor`: Quem forjou o anel (ex: Elfos).
-   - `imagem`: URL de uma imagem genérica do anel.
+Edite o arquivo .env com as configurações do banco de dados.
+Execute as migrações:
+bash
+Copiar código
+npx prisma migrate dev
+Inicie o servidor
 
-2. **Regras de Negócio para Criação de Anéis**  
-   A API deverá garantir que a quantidade máxima de anéis criados respeite as seguintes regras:
-   
-   - **Elfos**: No máximo 3 anéis.
-   - **Anões**: No máximo 7 anéis.
-   - **Homens**: No máximo 9 anéis.
-   - **Sauron**: Apenas 1 anel.
+bash
+Copiar código
+npm start
+Frontend
+Clone o repositório
 
-   Caso o limite seja excedido, a criação deve ser rejeitada com uma mensagem de erro adequada.
+bash
+Copiar código
+git clone <URL_DO_REPOSITORIO>
+cd <DIRETORIO_DO_PROJETO>
+Instale as dependências
 
-3. **Listar os Anéis**  
-   A API deverá retornar uma lista com todos os anéis e suas propriedades.
+bash
+Copiar código
+npm install
+Inicie o servidor de desenvolvimento
 
-4. **Atualizar um Anel**  
-   Deve ser possível atualizar as informações de um anel específico (ex: alterar o portador ou a descrição do poder).
+bash
+Copiar código
+npm start
+Testes
+Backend
+Testes unitários com Jest
+bash
+Copiar código
+npm test
+Frontend
+Testes end-to-end com Cypress
+bash
+Copiar código
+npx cypress open
+root  do projeto final.
+│
+├── /backend
+│   ├── /src
+│   │   ├── /controllers
+│   │   │   └── ring.controller.ts  // Controlador para lidar com as rotas relacionadas aos anéis
+│   │   │
+│   │   ├── /entities
+│   │   │   └── ring.ts  // Definição da entidade Ring (Anel)
+│   │   │
+│   │   ├── /repositories
+│   │   │   ├── ring.repository.ts  // Interface do repositório de anéis
+│   │   │   └── ring.repository.prisma.ts  // Implementação usando Prisma
+│   │   │
+│   │   ├── /services
+│   │   │   ├── ring.service.ts  // Interface RingService,DTO para entrada, saida, lista de anéis.
+│   │   │   └── ring.service.implementation.ts  // Implementação do RingService
+│   │   │
+│   │   │
+│   │   ├── /api
+│   │   │   └── api.express.ts  // Definição das rotas da API relacionadas a anéis
+│   │   │
+│   │   ├── /controller
+│   │   │   └── ring.controller.ts  // controller para tratamento de erros
+│   │   │
+│   │   ├── /prisma
+│   │   │   └── schema.prisma  // Arquivo de esquema do Prisma para o banco de dados
+│   │   │
+│   │   ├── /config
+│   │   │   └── database.config.ts  // Configuração do banco de dados
+│   │   │
+│   │   └── server.ts  // Arquivo principal para rodar o servidor Express
+│   │
+│   └── /tests
+│       ├── /integration
+│       │   └── ring.controller.test.ts  // Testes de integração para o controlador de anéis
+│       └── /unit
+│           └── ring.service.test.ts  // Testes unitários para o serviço de anéis
+│
+├── /frontend
+│   ├── /src
+│   │   ├── /components
+│   │   │   ├── Header.tsx  // Componente do cabeçalho
+│   │   │   ├── RingForm.tsx  // Formulário para criar/atualizar anéis
+│   │   │   ├── RingList.tsx  // Componente para listar os anéis
+│   │   │   └── Footer.tsx  // Componente do rodapé
+│   │   │── api.ts  // Configuração de Axios ou métodos auxiliares para chamadas à API
+│   │   │
+│   │   │── /public 
+│   │   │
+│   │   ├── app.css  // Estilos globais do frontend
+│   │   │     
+│   │   │   
+│   │   │
+│   │   └── index.tsx  // Arquivo principal do React
+│   │
+│   └── /tests
+│       ├── /e2e
+│       │   └── ring.e2e.test.ts  // Testes de fim a fim com Cypress
+│       └── /unit
+│           └── ring.service.test.ts  // Testes unitários para o serviço de anéis no frontend
+│
+├── /docs
+│   └── README.md  // Documentação do projeto com instruções de uso
+│
+│
+├── package.json  // Configurações de dependências do projeto
+├── tsconfig.json  // Configurações do TypeScript
+├── tailwind.config.js  // Configuração do Tailwind para o projeto frontend
 
-5. **Deletar um Anel**  
-   Deve ser possível remover um anel do banco de dados.
-
-### Frontend
-
-1. **Tela de Criação/Atualização de Anel**  
-   - Um formulário com os seguintes campos:
-     - `nome`: Campo de texto para o nome do anel.
-     - `poder`: Campo de texto para a descrição do poder do anel.
-     - `portador`: Campo de texto para o nome do portador.
-     - `forjadoPor`: Campo de texto para indicar quem forjou o anel.
-     - `imagem`: Como a imagem vai ser genérica você pode tanto deixar o uauário escolher entre as imagens que o próprio sistema fornece ou remover esse campo e deixar uma imagem default.
-   - Botões para:
-     - **Criar**: Submeter o formulário para criar um novo anel.
-     - **Atualizar**: Alterar as informações de um anel existente.
-
-2. **Tela de Visualização dos Anéis**
-   - Exibir todos os anéis em um **carrossel** (ou grid), mostrando:
-     - Nome, poder, portador, forjadoPor, e a imagem do anel.
-   - O carrossel deve ser responsivo e permitir rolar entre os anéis cadastrados.
-   - Adicionar a possibilidade de **excluir** ou **editar** um anel diretamente dessa tela.
-
-## 🚀 Tecnologias
-
-- **Backend**:
-  - **Node.js** com **TypeScript**
-  - **Express** (ou outro framework para criar a API)
-  - **Banco de Dados**: MySQL, PostgreSQL, MongoDB, etc.
-  - **ORM/ODM**: Sequelize, TypeORM ou Mongoose.
-
-- **Frontend**:
-  - **React**
-  - **Biblioteca para Carrossel**: Você pode utilizar bibliotecas como `react-slick` ou outra para implementar o carrossel.
-
-## 🛠️ Instruções
-
-1. Faça o **fork** deste repositório.
-2. Crie uma nova branch com o nome do seu desafio: `git checkout -b desafio-seu-nome`.
-3. Implemente sua solução backend e frontend conforme os requisitos descritos.
-4. Faça o **commit** das suas alterações: `git commit -m 'Desafio finalizado'`.
-5. Faça o **push** para a branch criada: `git push origin desafio-seu-nome`.
-6. Crie um **Pull Request** para o repositório principal.
-7. Envie um email para "contato@devvo.com.br" falando que finalizou seu desafio e encaminhando o link do Pull Request
-
-## 📝 Regras e Critérios de Avaliação
-
-1. **Organização do código**: Estrutura clara e modularidade do código.
-2. **Boas práticas**: Uso de boas práticas de desenvolvimento, como SOLID e DRY.
-3. **Frontend**: Interface limpa, funcional e interativa (carrossel funcionando corretamente).
-4. **Validação da Regra de Negócio**: Implementação correta da validação do limite de anéis por portador.
-5. **Testes**: Testes unitários e/ou de integração serão um diferencial.
-6. **Documentação**: Adicione uma breve documentação da API e do frontend (pode ser no próprio README ou em uma ferramenta como Swagger).
-
-## 🔥 Desafios Extras (Opcional)
-
-Se quiser ir além, aqui estão algumas sugestões de funcionalidades extras:
-
-- **Autenticação**: Implemente um sistema de autenticação (JWT, OAuth, etc.).
-- **Relacionamentos entre entidades**: Adicione relacionamentos entre os anéis e seus portadores (Ex: um portador pode ter mais de um anel, ou um anel pode ter sido passado por diferentes portadores ao longo do tempo).
-- **Animações no Frontend**: Adicione animações ao carrossel ou à interface de criação de anéis.
-- **Responsividade Avançada**: Certifique-se de que o carrossel e todas as funcionalidades são totalmente responsivas em diferentes dispositivos.
-
-## 🧙‍♂️ Dicas
-
-- Divida a lógica do backend em camadas (Controllers, Services, Models).
-- Utilize hooks e componentes funcionais no frontend para um código mais limpo.
-- Utilize **TypeScript** tanto no backend quanto no frontend para garantir tipagem estática.
-- Planeje a interface para ser intuitiva e simples de usar.
-
-## 🧭 Referências
-
-- [Documentação do Node.js](https://nodejs.org/en/docs/)
-- [Documentação do TypeScript](https://www.typescriptlang.org/docs/)
-- [Documentação do React](https://reactjs.org/docs/getting-started.html)
-
----
-
-_May the Light of Eärendil guide you in this challenge!_
+Licença
+Este projeto é licenciado sob a MIT License. Veja o arquivo LICENSE para mais detalhes.

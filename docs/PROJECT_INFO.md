@@ -1,6 +1,4 @@
 
-Claro! Aqui está um exemplo de README para o seu projeto SOLID + MVC que usa Node.js, TypeScript, Express, Prisma no backend e React com Cypress no frontend:
-
 Projeto SOLID + MVC
 Descrição
 Este repositório contém o projeto desenvolvido durante a aula sobre SOLID e MVC: uma API Rest completa com Node.js, TypeScript, Express e Prisma. O projeto permite o cadastro de produtos, além de possibilitar a venda e compra desses produtos, ajustando o estoque conforme necessário. Também inclui uma interface simples em React para visualizar e gerenciar os produtos.
