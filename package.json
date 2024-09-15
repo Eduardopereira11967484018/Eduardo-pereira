@@ -1,0 +1,29 @@
+{
+  "name": "eduardo-pereira",
+  "version": "1.0.0",
+  "description": "_One Challenge to rule them all, One Challenge to find them, One Challenge to bring them all, and in the darkness bind them_",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --passWithNoTests",
+    "dev": "ts-node src/main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.19.1",
+    "express": "^4.21.0",
+    "ts-node-dev": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.13",
+    "@types/node": "^22.5.4",
+    "jest": "^29.7.0",
+    "prisma": "^5.19.1",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  }
+}

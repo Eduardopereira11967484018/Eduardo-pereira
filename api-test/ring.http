@@ -1,0 +1,36 @@
+###
+GET http://localhost:8000/ring
+
+###
+POST http://localhost:8000/ring/create
+Content-Type: application/json
+
+{
+    "name":"create 1",
+    "price":
+}
+
+###
+POST http://localhost:8000/ring/create
+Content-Type: application/json
+
+{
+    "name":"creater",
+    "price":
+}
+
+###
+POST http://localhost:8000/ring/774bb0ca-f445-4c24-aae2-2dd4e9b748c2/buy
+Content-Type: application/json
+
+{
+    "amount":
+}
+
+###
+POST http://localhost:8000/ring/774bb0ca-f445-4c24-aae2-2dd4e9b748c2/sell
+Content-Type: application/json
+
+{
+    "amount":
+}
