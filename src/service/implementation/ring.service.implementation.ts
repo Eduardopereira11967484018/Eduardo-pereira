@@ -1,5 +1,5 @@
 import { Ring } from "../../entities/ring";
-import { RingRepository } from "../../repositories/ring.repository"; // Ajuste o caminho conforme a estrutura do seu projeto
+import { RingRepository } from "../../repositories/ring.repository"; // Ajuste o caminho
 import {
     BuyOutputDto,
     CreateOutputDto,
