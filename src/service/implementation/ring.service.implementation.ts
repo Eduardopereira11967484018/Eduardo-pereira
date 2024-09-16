@@ -6,7 +6,7 @@ import {
     ListOutputDto,
     RingService,
     SellOutputDto,
-} from "../ring.service"; // Ajuste o caminho conforme a estrutura do seu projeto
+} from "../ring.service"; // Ajuste o caminho
 
 export class RingServiceImplementation implements RingService {
     private constructor(private readonly repository: RingRepository) {}
